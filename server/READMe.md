@@ -5,5 +5,5 @@
 -Clone the repository
 
 ```bash
-$git clone 
+$git clone https://github.com/Kx-3/REACT-DJANGO-BLOG-APP.git
 ```

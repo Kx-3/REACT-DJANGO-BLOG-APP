@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import BlogCard from "./components/BlogCard";
+import { Link } from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
@@ -15,14 +16,16 @@ function App() {
   }, []);
 
   return (
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
+    <section className="text-gray-600 body-font">
+      <div className="container px-5 py-24 mx-auto">
         <h1 className="m-12 text-4xl">Blog App</h1>
-        <div class="flex flex-wrap -m-4">
+        <Link to={"/create"}>Create</Link>
+        <div className="flex flex-wrap -m-4">
           {data.map((blog) => {
             return (
               <BlogCard
                 blog={blog}
+                fn={fetchBlogs}
               />
             );
           })}
